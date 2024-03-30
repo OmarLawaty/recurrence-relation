@@ -73,7 +73,7 @@ string *separateExpression(string expression)
   {
     char ch = expression[i];
 
-    if (getParenthesesLevel(expression, i) == 0 && (ch == '+' || ch == '-'))
+    if (getParenthesesLevel(expression, i) == 0 && ch != ' ' && (ch == '+' || ch == '-'))
     {
       terms[termsIndex++] = term;
       terms[termsIndex++] = ch;
